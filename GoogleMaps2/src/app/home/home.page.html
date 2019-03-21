@@ -3,10 +3,45 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>-nome-</ion-title>
+    <ion-title>-Home-</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
+<div id="floating-panel">
+<b>Start: </b>
+<select {(ngModel)}="Start" id="Start">
+  <option value="chicago, 11">Chicago, IL</option>
+  <option value="st louis, mo">St Louis, MO</option>
+  <option value="Joplin, mo">Joblin, MO</option>
+  <option value="oklahoma city, ok">Oklahoma City, OK</option>
+  <option value="amarillo, tx">Amarillo, TX</option>
+  <option value="gallup, nm">Gallup, NM</option>
+  <option value="flagstaff, az">Flagstaff, AZ</option>
+  <option value="winona, il">Winona, IL</option>
+  <option value="kingman, il">Kingman, IL</option>
+  <option value="barstow, ca">Barstow, CA</option>
+  <option value="san bernardino, ca">San Bernardino, CA</option>
+  <option value="Los Angeles, ca"></option>
+</select>
+<br>
+<b>End: </b>
+<select {(ngModel)}="End" id="End">
+    <option value="chicago, 11">Chicago, IL</option>
+    <option value="st louis, mo">St Louis, MO</option>
+    <option value="Joplin, mo">Joblin, MO</option>
+    <option value="oklahoma city, ok">Oklahoma City, OK</option>
+    <option value="amarillo, tx">Amarillo, TX</option>
+    <option value="gallup, nm">Gallup, NM</option>
+    <option value="flagstaff, az">Flagstaff, AZ</option>
+    <option value="winona, il">Winona, IL</option>
+    <option value="kingman, il">Kingman, IL</option>
+    <option value="barstow, ca">Barstow, CA</option>
+    <option value="san bernardino, ca">San Bernardino, CA</option>
+    <option value="Los Angeles, ca"></option>
+  </select>
+  
+  <button ion-button block (click)="calculateAndDisplayRoute()">Generate</button>
+</div>
   <div #map id="map"></div>
 </ion-content>
